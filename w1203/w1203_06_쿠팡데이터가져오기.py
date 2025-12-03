@@ -20,16 +20,6 @@ import undetected_chromedriver as uc
 
 ### selenium
 
-# url = "https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&traceId=mipn03v2&channel=user&page=1"
-# headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
-
-# browser = webdriver.Chrome()
-# browser.get(url)
-# input("엔터")
-# time.sleep(5)
-# soup = BeautifulSoup(browser.page_source,"lxml")
-
-# headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
 # headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64)","Accept-Language":"ko-KR,ko;q=0.9","Referer": "https://www.coupang.com/"}
 
 # options = uc.ChromeOptions()
@@ -86,3 +76,6 @@ for li in lis:
         row_count += 1
         
 print("전체 개수 :",row_count)
+
+
+
