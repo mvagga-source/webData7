@@ -19,7 +19,14 @@ headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537
 with open("daum_movie.html","r",encoding="utf8") as f:
     soup = BeautifulSoup(f,"lxml")
     
-print(soup.find("div",{"class":"item-bundle-mid"}).find("a").text.strip())
+
+bundle = soup.find_all("div",{"class":"item-bundle-mid"})
+print(bundle)
+
+# for i in range(len(bundle)):
+#     print(bundle[i].find("div",{"class":"item-title"}).a.text.strip())
+#     print(bundle[i].find("div",{"class":"item-contents"}).a.text.strip())
+#     print(bundle[i].find("div",{"class":"item-contents"}).span.text.strip())
 
     
     
