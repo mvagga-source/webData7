@@ -1,4 +1,7 @@
 
+# pip install beautifulsoup4
+# pip install lxml
+# pip install requests
 # pip install webdriver-manager
 # pip install undetected-chromedriver
 # pip uninstall setuptools

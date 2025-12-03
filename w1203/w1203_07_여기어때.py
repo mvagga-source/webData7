@@ -17,32 +17,29 @@ import os
 import csv
 import undetected_chromedriver as uc
 
-# headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64)","Accept-Language":"ko-KR,ko;q=0.9","Referer": "https://www.yeogi.com/"}
 
-# options = uc.ChromeOptions()
-# options.add_argument("--no-first-run --no-service-autorun --password-store=basic")
-# options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36")
-# # 2. selenium 정보가져오기
-# url = "https://www.yeogi.com/domestic-accommodations?keyword=%EA%B0%95%EB%A6%89&personal=2&checkIn=2025-12-26&checkOut=2025-12-27&sortType=RECOMMEND&category=2"
-# browser = uc.Chrome(options=options)
-# browser.get(url)
-# time.sleep(5)
-# soup = BeautifulSoup(browser.page_source,"lxml")
-
-# # 파일저장
-# with open("yeogi.html","w",encoding="utf8") as f:
-#     f.write(soup.prettify())
-# print("파일저장")
 
 # 1. 파일 불러오기
 with open("yeogi.html","r",encoding="utf8") as f:
     soup = BeautifulSoup(f,"lxml")
 
 div = soup.find("div",{"class":"css-1jiha5s"})
-ds = div.find_all("div",{"class":"gc-thumbnail-type-seller-card-wrapper css-1u8qly9"})
+divs = div.find_all("div",{"class":"gc-thumbnail-type-seller-card-wrapper css-1u8qly9"})
 
-
-print(ds[0].find("img")['src'])
-print(ds[0].find("h3",{"class":"gc-thumbnail-type-seller-card-title css-1gxx2ac"}).text.strip())
-print(ds[0].find("span",{"class":"css-9ml4lz"}).text.strip())
-print(ds[0].find("span",{"class":"css-oj6onp"}).text.strip())
+for ds in divs:
+    
+    if ds.find("img"):
+        print(ds.find("img")['src'])
+        print(ds.find("h3",{"class":"gc-thumbnail-type-seller-card-title css-1gxx2ac"}).text.strip())
+        
+        if ds.find("span",{"class":"css-9ml4lz"}):
+            print(ds.find("span",{"class":"css-9ml4lz"}).text.strip())
+        
+        if ds.find("span",{"class":"css-oj6onp"}):
+            print(ds.find("span",{"class":"css-oj6onp"}).text.strip().split("\n")[0].replace(",",""))
+            
+        if ds.find("span",{"class":"css-5r5920"}):
+            print(ds.find("span",{"class":"css-5r5920"}).text.strip().replace(",",""))
+        else:
+            print("0")
+        print("-"*100)
