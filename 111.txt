@@ -1,0 +1,13 @@
+pip install jupyter
+
+selenium 사이트 자동화 프레임워크
+pip install selenium
+크롬 드라이브 다운로드
+
+requests                        selenium 동적 
+동적 웹 페이지 X (java등 안됨)         동적 웹 페이지 O
+
+
+
+
+BeautifulSoup
