@@ -1,0 +1,25 @@
+1.
+requests 라이브러리 설치 :
+pip install requests웹 정보 요청하는 라이브러리
+
+2.
+beautifulsoup4 라이브러리 설치 :
+pip install beautifulsoup4
+HTML 및 XML 파일에서 원하는 데이터를 손쉽게 Parsing 할 수 있는 Python 라이브러리
+
+3.
+lxml 라이브러리 설치 :
+pip install lxml
+lxml을 설치하면 css 문법으로 특정 요소를 쉽게 가져올 수 있는 Python 라이브러리
+
+4.
+사이트 자동화 프레임워크
+pip install selenium
+## chromedriver 크롬 드라이버 다운로드https://chromedriver.chromium.org/downloads
+
+5. 주피터 노트북 설치
+pip install jupyter
+vscode - 확장 : jupyter 라이브러리 설치
+
+6. 마우스 제어 라이브러리 설치
+pip install pyautogui
