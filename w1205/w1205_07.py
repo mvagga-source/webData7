@@ -54,7 +54,7 @@ ol = soup.find("div",{"id":"estateCollTabContentsResult"}).find("ol")
 lis = ol.find_all("li")
 
 for li in lis:
-    li.find("em",{})
+    print(li.find("em",{"class":"mark_count"}).text.strip())[-1]
 
 
 
