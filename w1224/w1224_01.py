@@ -10,7 +10,7 @@ import time
 browser = webdriver.Chrome()
 
 # 크롬브라우저 창이 열림
-browser.get("https://www.bluer.co.kr/magazine?type=MAGAZINE")
+browser.get("https://www.bluer.co.kr/magazine/595")
 
 # 3초 대기
 # input("enter키 다시 실행")
